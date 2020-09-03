@@ -18,7 +18,7 @@ cv2.destroyAllWindows()
 with open('NewPicture.jpg', 'rb') as f:
     photo = f.read()
 encodestring = base64.b64encode(photo)
-db= mysql.connector.connect(user="testing_remote",password="testing_remote",host="34.123.152.95",database="images")
+db= mysql.connector.connect(user="#",password="#",host="34.123.152.95",database="images")
 mycursor=db.cursor()
 sql = "insert into img values(%s)"
 mycursor.execute(sql,(encodestring,))
